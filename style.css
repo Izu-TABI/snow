@@ -1,0 +1,61 @@
+* {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: rgb(219, 219, 219);
+  background-color: rgb(0, 0, 0);
+}
+
+h1 {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+#snow_particlesjs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+#snow-man {
+  animation: swing 2s 2s ease-in-out infinite alternate;
+  position: absolute;
+  width: 20vh;
+  height: auto;
+  bottom: 20px;
+  left: 50%;
+  z-index: 1;
+}
+
+
+@keyframes swing {
+
+  0%,
+  100% {
+    transform-origin: bottom center;
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+#snow-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(255, 255, 255);
+}
