@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=Hachi+Maru+Pop&family=Linefont:wght@200&family=Playpen+Sans:wght@500&family=Quicksand:wght@600&family=Roboto+Mono&family=Zen+Kaku+Gothic+New:wght@500&display=swap');
 
+/* Reset */
 * {
   overflow-y: hidden;
   overflow-x: hidden;
@@ -16,6 +17,7 @@
   user-select: none;
 }
 
+/* フォント */
 html,
 body {
   font-family: "Mountains of Christmas", serif;
@@ -31,6 +33,7 @@ h1 {
   margin-bottom: 50px;
 }
 
+/* 雪 */
 #snow_particlesjs {
   position: relative;
   width: 100%;
@@ -38,6 +41,7 @@ h1 {
   z-index: 2;
 }
 
+/* ゆきだるま */
 #snow-man {
   animation: swing 2s 2s ease-in-out infinite alternate;
   position: absolute;
@@ -48,9 +52,33 @@ h1 {
   z-index: 1;
 }
 
-#app {
-  white-space: nowrap;
+/* ゆきだるまのアニメーション */
+@keyframes swing {
 
+  0%,
+  100% {
+    transform-origin: bottom center;
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+#snow-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(255, 255, 255);
+}
+
+/* to do */
+#todo-area {
+  white-space: nowrap;
   text-align: center;
   position: absolute;
   left: 50%;
@@ -58,8 +86,8 @@ h1 {
   transform: translate(-50%, -50%);
   height: 65%;
   width: 60%;
-  overflow-y: auto;
   max-width: 500px;
+  overflow-y: auto;
   background: #fffaf0;
   padding: 20px;
   border-radius: 10px;
@@ -95,27 +123,4 @@ h1 {
   margin: 8px auto;
   padding: 10px;
   border-radius: 5px;
-}
-
-@keyframes swing {
-
-  0%,
-  100% {
-    transform-origin: bottom center;
-  }
-
-  50% {
-    transform: rotate(-3deg);
-  }
-}
-
-#snow-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
-  width: 100%;
-  height: 10vh;
-  background-color: rgb(255, 255, 255);
 }
