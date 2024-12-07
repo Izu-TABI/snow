@@ -70,3 +70,18 @@ particlesJS("snow_particlesjs", { //HTMLのidを指定
   },
   "retina_detect": true
 });
+
+const input = document.getElementById('todoInput');
+const addButton = document.getElementById('addButton');
+const todoList = document.getElementById('todoList');
+
+addButton.addEventListener('click', () => {
+  const text = input.value;
+  if (text) {
+    const li = document.createElement('li');
+    li.textContent = text;
+    li.addEventListener('click', () => li.remove());
+    todoList.appendChild(li);
+    input.value = '';
+  }
+});
